@@ -1,0 +1,30 @@
+{
+  "name": "learn-express",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Learn express by following a tutorial by Derek Banas.",
+  "main": "expresstut.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luAr26/learn-express.git"
+  },
+  "keywords": [
+    "express",
+    "learn",
+    "express",
+    "node.js"
+  ],
+  "author": "luAr26",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luAr26/learn-express/issues"
+  },
+  "homepage": "https://github.com/luAr26/learn-express#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^2.0.1"
+  }
+}
