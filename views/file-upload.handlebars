@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h3>Upload File</h3>
+</div>
+<form role="form" enctype="multipart/form-data" method="POST" action="/file-upload/{{year}}/{{month}}">
+  <div class="form-group">
+    <label for="fieldName" class="control-label"> Name</label>
+    <input type="text" class="form-control" id="fieldName" name="name">
+  </div>
+  <div class="form-group">
+    <label for="fieldEmail" class="control-label"> Email</label>
+    <input type="email" class="form-control" required id="fieldEmail" name="email">
+  </div>
+  <div class="form-group">
+    <label for="fieldPhoto" class="control-label">Vacation photo</label>
+    <!-- Only accept images -->
+    <input type="file" class="form-control" required accept="image/*" id="fieldPhoto" name="photo">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
