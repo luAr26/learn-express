@@ -1,17 +1,25 @@
 (function () {
   'use strict';
-  var express, app;
+  var express, app, handlebars;
 
   express = require('express');
   app = express();
 
+  app.disable('x-powered-by');
+  handlebars = require('express-handlebars');
+
+  app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+  app.set('view engine', 'handlebars');
+
+
   app.set('port', process.env.PORT || 3000);
+  app.use(express.static(__dirname + '/public'));
 
   app.get('/', function (req, res) {
-    res.send('Hello, from express!');
+    res.render('home');
   });
 
   app.listen(app.get('port'), function () {
-    console.log('Express started on port ' + app.get('port') + '. Press Ctrl+C to terminate...');
+    console.log('Express started on http://localhost:' + app.get('port') + '. Press Ctrl+C to terminate...');
   });
 }());
